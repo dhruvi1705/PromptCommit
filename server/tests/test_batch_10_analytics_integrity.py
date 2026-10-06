@@ -3,7 +3,7 @@ BATCH 10 — Analytics Integrity Tests
 Tests: rating null/N/A, rating accuracy, model normalization, collection analytics,
 metric consistency, recent activity ordering, empty dataset, user isolation.
 """
-import pytest
+# pyrefly: ignore [missing-import]
 import uuid
 import requests
 import time

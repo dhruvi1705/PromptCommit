@@ -8,6 +8,7 @@ Test Suite for Batch 4:
 
 import time
 import uuid
+# pyrefly: ignore [missing-import]
 import pytest
 import requests
 

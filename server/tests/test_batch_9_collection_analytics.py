@@ -1,3 +1,4 @@
+# pyre-ignore [missing-import]
 import pytest
 import requests
 import uuid

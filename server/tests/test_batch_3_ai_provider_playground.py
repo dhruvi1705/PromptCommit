@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import pytest
 import asyncio
 from fastapi.testclient import TestClient
@@ -19,6 +20,7 @@ client = TestClient(app)
 
 
 def get_auth_token_for_test(user_id="user1", email="aanshi@promptcommit.dev"):
+    # pyrefly: ignore [unexpected-keyword]
     return create_access_token(data={"sub": user_id, "email": email})
 
 

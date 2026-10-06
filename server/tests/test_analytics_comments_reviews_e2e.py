@@ -7,6 +7,7 @@ End-to-End Verification Test Suite for:
 import uuid
 import datetime
 import requests
+# pyrefly: ignore [missing-import]
 import pytest
 from app.core.database import SessionLocal
 from app.models.user import User

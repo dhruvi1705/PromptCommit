@@ -1,6 +1,6 @@
 import time
 import uuid
-import pytest
+# pyrefly: ignore [missing-import]
 import requests
 
 BASE_URL = "http://localhost:8000/api"

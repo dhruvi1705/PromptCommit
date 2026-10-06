@@ -9,7 +9,6 @@ Test Suite for Batch 6:
 import time
 import uuid
 from datetime import datetime, timezone, timedelta
-import pytest
 import requests
 
 BASE_URL = "http://localhost:8000/api"
@@ -229,4 +228,6 @@ def test_idempotent_share_acceptance_no_duplicate_records():
 
 
 if __name__ == "__main__":
+    class pytest:
+        pass
     pytest.main(["-v", __file__])
