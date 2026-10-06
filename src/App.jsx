@@ -53,46 +53,46 @@ function App() {
         <NotificationProvider>
           <ToastProvider>
             <LanguageProvider>
-              <Router>
-                <ScrollToTop />
-                <PageTitle />
-                <Routes>
-                  {/* Public Marketing, Auth & Collaboration Invite Pages */}
-                  <Route path="/" element={<Landing />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/invite/:token" element={<ErrorBoundary><AcceptInvite /></ErrorBoundary>} />
+  <Router basename="/PromptCommit">
+    <ScrollToTop />
+    <PageTitle />
+    <Routes>
+      {/* Public Marketing, Auth & Collaboration Invite Pages */}
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/invite/:token" element={<ErrorBoundary><AcceptInvite /></ErrorBoundary>} />
 
-                  {/* Protected Private Workspace Dashboard Routes */}
-                  <Route
-                    path="/app"
-                    element={
-                      <ProtectedRoute>
-                        <ErrorBoundary>
-                          <Layout />
-                        </ErrorBoundary>
-                      </ProtectedRoute>
-                    }
-                  >
-                    <Route index element={<Dashboard />} />
-                    <Route path="prompts" element={<PromptLibrary />} />
-                    <Route path="create" element={<CreatePrompt />} />
-                    <Route path="playground" element={<Playground />} />
-                    <Route path="versions" element={<Versions />} />
-                    <Route path="compare" element={<Compare />} />
-                    <Route path="toolkit" element={<AIToolkit />} />
-                    <Route path="collections" element={<Collections />} />
-                    <Route path="favorites" element={<Favorites />} />
-                    <Route path="collaboration" element={<Collaboration />} />
-                    <Route path="analytics" element={<Analytics />} />
-                    <Route path="settings" element={<Settings />} />
-                  </Route>
+      {/* Protected Private Workspace Dashboard Routes */}
+      <Route
+        path="/app"
+        element={
+          <ProtectedRoute>
+            <ErrorBoundary>
+              <Layout />
+            </ErrorBoundary>
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<Dashboard />} />
+        <Route path="prompts" element={<PromptLibrary />} />
+        <Route path="create" element={<CreatePrompt />} />
+        <Route path="playground" element={<Playground />} />
+        <Route path="versions" element={<Versions />} />
+        <Route path="compare" element={<Compare />} />
+        <Route path="toolkit" element={<AIToolkit />} />
+        <Route path="collections" element={<Collections />} />
+        <Route path="favorites" element={<Favorites />} />
+        <Route path="collaboration" element={<Collaboration />} />
+        <Route path="analytics" element={<Analytics />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
 
-                  {/* 404 Fallback */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Router>
-            </LanguageProvider>
+      {/* 404 Fallback */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </Router>
+</LanguageProvider>
           </ToastProvider>
         </NotificationProvider>
       </PromptProvider>
